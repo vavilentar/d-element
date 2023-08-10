@@ -37,7 +37,7 @@ function cleanInputs() {
 		item.value = '';
 		item.classList.remove('validation_failed');
 	});
-};
+}
 
 function emailValidation(data) {
 	const splittedEmail = data[1].split('');
@@ -47,10 +47,10 @@ function emailValidation(data) {
 				return true;
 			default:
 				break;
-		};
-	};
+		}
+	}
 	return false;
-};
+}
 
 function dataOdject(name, email, message) {
 	const data = {
@@ -59,7 +59,7 @@ function dataOdject(name, email, message) {
 		userMessage: message,
 	};
 	return data;
-};
+}
 
 function validationCheck() {
 	for (let i = 0; i < formInputs.length; i++) {
@@ -67,8 +67,8 @@ function validationCheck() {
 			formInputs[i].classList.add('validation_failed');
 		} else {
 			formData.push(formInputs[i].value);
-		};
-	};
+		}
+	}
 	if (formData.length == 3) {
 		if (emailValidation(formData)) {
 			successPopup.classList.remove('form__closed');
@@ -78,26 +78,26 @@ function validationCheck() {
 			setTimeout(closeSuccessPopup, 1000);
 		} else {
 			formInputs[1].classList.add('validation_failed');
-		};
-	};
-};
+		}
+	}
+}
 
 function closeSuccessPopup() {
 	successPopup.classList.add('form__closed');
-};
+}
 
 function openModal() {
 	formOverlay.classList.remove('form__closed');
 	messageForm.classList.remove('form__closed');
 	document.body.style = 'overflow: hidden';
-};
+}
 
 function closeModal() {
 	formOverlay.classList.add('form__closed');
 	messageForm.classList.add('form__closed');
 	document.body.style = 'overflow: auto';
 	cleanInputs();
-};
+}
 
 async function postData (url, data) {
 	let result = await fetch(url, {
@@ -105,4 +105,4 @@ async function postData (url, data) {
 		body: data
 	});
 	return await result.text();
-};
+}
