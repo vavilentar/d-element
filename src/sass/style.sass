@@ -1,0 +1,74 @@
+@import './blocks/_promo.sass'
+@import './blocks/_header.sass'
+@import './blocks/_services.sass'
+@import './blocks/_clients.sass'
+@import './blocks/_footer.sass'
+@import './_media.sass'
+@import './fonts.sass'
+@import './blocks/_form.sass'
+
+@keyframes validationFailedAnimation
+	10%,
+	90%
+		transform: translate3d(-1px, 0, 0)
+
+	20%,
+	80%
+		transform: translate3d(2px, 0, 0)
+
+	30%,
+	50%,
+	70%
+		transform: translate3d(-4px, 0, 0)
+
+	40%,
+	60%
+		transform: translate3d(4px, 0, 0)
+
+@keyframes promoFadeIn
+	from
+		opacity: 0
+	to
+		opacity: 1
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span
+	color: #1F3F68
+	font-family: 'Gilroy'
+a
+	text-decoration: none
+	color: #1F3F68
+	font-family: 'Gilroy'
+textarea
+	resize: none
+textarea:focus, input:focus
+	outline: none
+*,
+*::before,
+*::after
+	padding: 0
+	margin: 0
+	border: 0
+	box-sizing: border-box
+
+.container
+	max-width: 1200px
+	margin: 0 auto
+.btn_blue
+	background-color: #5A98D0
+	transition: background-color .3s ease-in-out
+	cursor: pointer
+	border-radius: 10px
+	font-family: 'Gilroy'
+	font-size: 16px
+	color: #fff
+	line-height: 26px
+	font-weight: 400
+.btn_blue:hover
+	background-color: #83C0F6
