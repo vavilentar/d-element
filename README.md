@@ -7,3 +7,7 @@
 5. Деструктуризация файлов проекта ~0.5 часа
 6. Функционал модального окна (открытие, закрытие, валидация, отправка данных) ~3 часа
 7. Проверка работоспособности на Firefox, Mozilla, Chrome, DuckDuckGo, Opera, Yandex.Browser, Safari (только мобильный)
+
+git clone https://github.com/vavilentar/d-element.git
+npm i
+gulp
